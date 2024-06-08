@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+
+   
+    <link rel="stylesheet" href="./viewBlog.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="body">
+        <div class="navbar">
+            <h1><a href="/home">Blogger</a></h1>
+            <div class="nav-buttons">
+                <ul><a href="/home">Home</a></ul>
+                <ul><a href="/about">About</a></ul>
+                <ul><a href="/contact">Contact</a></ul>
+            </div>
+            <div class="button">
+                <button class="btn"><a href="./createblog">Create Blog</a></button>
+                
+            </div>
+        </div>
+
+        <div class="slogan m1">
+            <div class="content-left">
+                <h2>
+                    "Writing that Inspires"
+                </h2>
+                <p>"Welcome to <span>BLOGGER</span>, where inspiration meets insight, and curiosity finds its voice. Step into a world where words weave stories, ideas spark discussions, and knowledge transforms into wisdom. Whether you're a seasoned enthusiast or a curious wanderer Blogger is for you.</p>
+            </div>
+            <div class="content-right">
+                <img src="./blog-writer-working-on-article-5691583-4759515.webp"width="250px">
+            </div>
+        </div>
+
+        <div class="promo">
+            <h3>All the Submitted Blogs will be Shown below</h3>
+        </div>
+   
+        <div class="blog-container">
+            <%blog.forEach(blog =>{%>
+            <% if (blog.image) {%>
+            <div class="blog-image">
+                <img src="../upload/<%= blog.image %>" alt="<%= blog.title %>">
+            </div>
+           <%  } %>
+            <div class="blog-content">
+                <h2><%= blog.title %></h2>
+                <p class="blog-desc">Description:<%= blog.description%></p>
+                <p class="content"><%= blog.content.substring(0, 200) %><a href="/blogs/<%=blog._id%>">...<span>read more</span></a></p>
+                <div class="svg">
+                    <button><a href="/blog/<%= blog._id %>/edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"></path><path d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"></path></svg></a></button>
+                    <button><a href="/delete/<%= blog._id %>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M20 2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3v3.767L13.277 18H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14h-7.277L9 18.233V16H4V4h16v12z"></path><path d="M9.707 13.707 12 11.414l2.293 2.293 1.414-1.414L13.414 10l2.293-2.293-1.414-1.414L12 8.586 9.707 6.293 8.293 7.707 10.586 10l-2.293 2.293z"></path></svg></a></button>
+                </div>
+            </div>
+          <% }) %>
+        </div>
+    </div> 
+    <footer class="footer">
+        <div class="container1">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: contact@yourblog.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; Blogger. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="tooltip">
+        <span>edit</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.posts{
+    display: flex;
+    flex-direction: column;
+    padding:30px 20px
+}
+.panel1{
+    margin-bottom: 20px;
+    height: 130px;
+    background-color: transparent;
+    margin-top: 4px;
+}
+
+.panel{
+    margin-bottom: 40px;
+    height: 40px;
+    margin-top: 4px;
+    background-color: transparent;
+}
+body{
+    background-color:whitesmoke
+}
+.container{
+    height: 100vh;
+}
+
+label{
+    font-size: 0.9rem;
+   text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: unset;
+    color: whitesmoke;
+    background-color:#415488;
+    padding: 5px 5px;
+    width: 10%;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.posts input{
+    border-radius: 10px;
+
+}
+.posts textarea{
+    border-radius: 10px;
+}
+
+input[type="file"]{
+    display: none;
+}
+.imageicon{
+    display: flex;
+    background-color: #415488;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:3px;
+    cursor: pointer;
+}
+
+.subBtn{
+    padding: 3px;
+    margin-top: 4px;
+}

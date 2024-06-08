@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/contact.css">
+</head>
+<body>
+    <div class="body">
+        <div class="navbar">
+            <h1><a href="/home">Blogger</a></h1>
+            <div class="nav-buttons">
+                <ul><a href="/home">Home</a></ul>
+                <ul><a href="/about">About</a></ul>
+                <ul><a href="/contact">Contact</a></ul>
+            </div>
+            <div class="button">
+                <button class="btn"><a href="./createblog">Create Blog</a></button>
+                
+            </div>
+        </div>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form action="/contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container1">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: shivamssharma398@gmail.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; Blogger. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+   <link rel="stylesheet" href="/styles.css">
+   <link rel="stylesheet" href="/create.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="/home">Blogger</a></h1>
+        <div class="nav-buttons">
+            <ul><a href="/home">Home</a></ul>
+            <ul><a href="/about">About</a></ul>
+            <ul><a href="/contact">Contact</a></ul>
+        </div>
+        <div class="button">
+            <button class="btn"><a href="http://localhost:3000/createblog">Create Blog</a></button>
+            <button class="btn"><a href ="http://localhost:3000/login">Login</a></button>
+            <button class="btn"><a href ="http://localhost:3000/signin">Sign in</a></button>
+          </div>
+    </div>
+
+    <div class="container">
+      <form action="/blog/<%= blog._id %>/edit?_method=PUT" id="form" class="form" method="post" enctype="multipart/form-data">
+        <div class="posts">
+          
+          <label><p>Title</p></label>
+          <textarea
+            class="panel"
+            type="text"
+            name="title"
+            placeholder="Your Title Here"><%= blog.title %>
+        </textarea>
+          <label><p>Description</p></label>
+          <textarea
+            class="panel"
+            type="text"
+            name="description"
+            placeholder="Description"
+          ><%= blog.description %></textarea>
+          <label><p>Content</p></label>
+          <textarea
+            class="panel1"
+            type="text"
+            name="content"
+            placeholder="write your content here"
+          ><%= blog.content %></textarea>
+          
+          
+          <label class="imageicon"><img src="./th.jpg" width="30px"><input class="imagebtn" type="file" name="logopic"/>select image</label>
+          <button class="subBtn" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="container1">
+          <div class="social-icons">
+              <a href="https://facebook.com" target="_blank">Facebook</a>
+              <a href="https://twitter.com" target="_blank">Twitter</a>
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contact-info">
+              <p>Email: shivamssharma398@gmail.com</p>
+              <p>Phone: (123) 456-7890</p>
+          </div>
+          <div class="copyright">
+              <p>&copy; Blogger. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
